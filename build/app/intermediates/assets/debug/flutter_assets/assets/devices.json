@@ -1,0 +1,4 @@
+[
+  { "id": 1, "name": "Light", "status": "off", "consumption": 10 },
+  { "id": 2, "name": "Fan", "status": "on", "consumption": 15 }
+]
