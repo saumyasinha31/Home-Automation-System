@@ -19,7 +19,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Dashboard')),
+
+      appBar: AppBar(title: Text('Dashboard',
+      ),
+      backgroundColor: Colors.green.shade600,
+
+      ),
       body: FutureBuilder<List<Device>>(
         future: _devices,
         builder: (context, snapshot) {
@@ -43,7 +48,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     onChanged: (bool value) {
                       setState(() {
                         device.status = value ? 'on' : 'off';
-                      });
+                      },
+                      );
                     },
                   ),
                 );
@@ -56,10 +62,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
         child: ListView(
           children: [
             ListTile(
-              title: Text('Settings'),
+              title: Text('Go to Settings'),
               onTap: () {
                 Navigator.pushNamed(context, '/settings');
               },
+
             ),
           ],
         ),
